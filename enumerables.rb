@@ -44,8 +44,8 @@ end
 # for the spicy food whose cuisine matches the cuisine being passed to the method
 def get_spicy_food_by_cuisine(spicy_foods, cuisine)
   # your code here
-  matched_cuisine = spicy_foods.map do |food|
-    "#{food[:cuisine]}"
+  matched_cuisine = spicy_foods.find do |food|
+    food[:cuisine] == cuisine
   end
   matched_cuisine 
 end
